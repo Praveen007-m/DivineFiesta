@@ -9,7 +9,7 @@
 header{
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
 }
 .navbar {
     background-color: black;
@@ -18,7 +18,7 @@ header{
     justify-content: space-around;
     height: 96px;
     width: 100%;
-    align-content: start;
+
 
 }
 .nav-1{
@@ -114,9 +114,7 @@ ul .drop:hover ul.dropdown{
     width: 100%;
     height: 100%;
     position: relative;
-    transform: translate(-50%, -50%);
-    top: 397px;
-    left: 759px;
+    border-top: 2px solid white;
     overflow: hidden;
     object-fit: contain;
     object-position: bottom;
@@ -124,7 +122,7 @@ ul .drop:hover ul.dropdown{
 .wrapper {
     display: flex;
     flex-wrap: nowrap;
-    animation: slide 16s infinite;
+    animation: slide 12s infinite;
 }
 
 @keyframes slide{
@@ -154,24 +152,28 @@ ul .drop:hover ul.dropdown{
 .wrapper img {
     width: 100%;
     
+    
 }
-.slogan{
-    position: absolute;
-    top: 140px;
-    left: 520px;
-    display: flex;
-    color: black; 
-    letter-spacing: 10px;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(4px);
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  color: whitesmoke;
+  z-index: 10;
 }
-
+.slogan>h1{
+  font-size: 30px;
+  letter-spacing: 5px;
+}
 
 .upcomming{
     display: flex;
     position: absolute;
-    top: 450px;
-    left: 680px;
+    top: 50%;
+    left: 45%;
     
 }
 .upcomming button{
@@ -182,9 +184,12 @@ ul .drop:hover ul.dropdown{
     background-color: greenyellow;
     color: black;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     padding: 5px 15px;
-    border-color: none;
+    border: none;
     transition: all 0.3s ease;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -197,27 +202,35 @@ ul .drop:hover ul.dropdown{
    
 .about {
     background-color: white;
-    padding: 40px;
+    padding: 0px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    height: 130px;
+}
+@media (max-width: 1100px) {
+    .about {
+        flex-direction: column;
+        height: auto; /* Adjusts height based on content */
+        
+    }
 }
 .choose{
-    width: 216px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 .choose1{
-    width: 256px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .choose2{
-    width: 141px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,7 +254,9 @@ ul .drop:hover ul.dropdown{
     
     font-size: 30px;
     text-align: center;
-    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100px;
     color: #ed1919;
     background-color: black;
@@ -459,9 +474,7 @@ h4 {
   margin-top: -10px;
   font-size: 18px;
 }
-/* ========================= */
 /* Responsive Design Starts  */
-/* ========================= */
 
 @media (max-width: 1024px) {
   .nav-right {
